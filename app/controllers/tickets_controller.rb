@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
     
+    #show all result
     def index
     @book=Ticket.all 
     end
@@ -12,5 +13,10 @@ class TicketsController < ApplicationController
     def new
     @book=Ticket.new
     end
+    
+
+
+   
+
 
 end
