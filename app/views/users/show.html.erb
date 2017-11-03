@@ -1,3 +1,33 @@
 
-<br><br><br>
-<%= @user.name %>, <%= @user.email %>
+
+
+
+
+              <div class="row">
+                
+                <div class="col-md-4">
+                   <br><br><br>
+                    <b>Name: </b><%= @user.name %><br>
+                    <b>Email: </b><%= @user.email %><br></b>
+                    <b>Account created: </b><%= @user.created_at %>  
+                                           
+                </div>
+                 <div class="col-md-4">
+                    
+                    <% if current_user.admin? %>
+                   <center><h3>You have loged in as Administrator</h3></center>
+                    <hr>
+                          <%= link_to "Reservation Request", tickets_path %><br>
+                          <%= link_to "Home", root_path %>
+                    <% end %>
+            
+                </div>
+                <div class="col-md-4 ">
+                   
+                </div>
+                
+                
+                 
+            </div>
+            
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
