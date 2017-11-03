@@ -20,7 +20,7 @@ class TicketsController < ApplicationController
     @book = Ticket.new(book_params)
     if @book.save
     redirect_to new_ticket_path
-      flash[:success] = "You have successfully booked"
+      flash[:success] = "successfully booked"
     else
       render 'new'
     end
@@ -32,6 +32,13 @@ class TicketsController < ApplicationController
     params.require(:ticket).permit(:started, :ended, :day)
     end
     
+    
+    def destroy
+      Ticket.find(params[:id]).destroy
+      flash[:success] = "Deleted"
+      redirect_to tickets_path
+    end
+ 
 
   
 end

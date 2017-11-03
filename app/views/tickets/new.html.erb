@@ -10,6 +10,7 @@
      
 <br>
       <%= form_for @book do |f| %>
+      <%= render 'shared/error_message', object: @book%>
       <%= f.label :From%>
       <%= f.select :started,["Aberdeen","Dundee", "Glasglow", "London","stirling","Brostol","kent"],  class: 'form-control' %><br><br>
       <%= f.label :To%>

@@ -14,7 +14,8 @@
                         <b>From:</b>  <%=book.started %><br>
                         <b>To:</b><%=book.ended %><br>
                         <b>Day:</b><%=book.day%><br>
-                        
+                         <%= link_to "Delete",ticket_path(book), method: :delete,
+                                  data: { confirm: " Are you sure?" } %>
                         
                                     <hr><br></td></tr>
                                      
